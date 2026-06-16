@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tahoe Lodging — Aug 10–12 (family of 7)</title>
 <meta property="og:title" content="Tahoe Lodging Options — Aug 10–12, family of 7">
-<meta property="og:description" content="Donner vs South Lake: cabins & condos compared against the $680 suite. Airbnb + VRBO.">
+<meta property="og:description" content="Top 7 each: Donner vs South Lake, cabins & condos vs the $680 suite. Airbnb + VRBO.">
 <style>
   :root{ --ink:#1d2a32; --muted:#5b6b76; --line:#e6ebee; --bg:#f4f7f9; --green:#1f9d63; --amber:#c8851a; --pine:#16604a; --lake:#1f6f93; }
   *{box-sizing:border-box}
@@ -28,9 +28,6 @@
   .card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(20,40,50,.14)}
   .ph{position:relative;height:178px;background:#dfe6ea}
   .ph img{width:100%;height:100%;object-fit:cover;display:block}
-  .ph.noimg{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a7d63,#1f6f93);color:#eafff6;text-align:center;padding:16px}
-  .ph.noimg span{font-size:14px;font-weight:600;line-height:1.35}
-  .ph.noimg .mtn{font-size:30px;display:block;margin-bottom:6px;opacity:.85}
   .price{position:absolute;top:10px;right:10px;background:#fff;border-radius:11px;padding:6px 10px;font-weight:800;font-size:16px;box-shadow:0 3px 10px rgba(0,0,0,.16);display:flex;align-items:center;gap:6px}
   .price .dot{width:8px;height:8px}
   .tag{position:absolute;top:10px;left:10px;background:#16604a;color:#fff;font-size:11px;font-weight:700;border-radius:20px;padding:4px 10px;letter-spacing:.3px}
@@ -50,7 +47,7 @@
 <div class="wrap">
   <header class="hero">
     <h1>🏔️ Tahoe Lodging — 2 nights, family of 7</h1>
-    <p><b>Aug 10–12, 2026.</b> The real shortlist after checking Airbnb <i>and</i> VRBO on both shores. Short version: <b>Donner / north shore is the value play; South Lake charges ~$200 more for the same eight beds.</b></p>
+    <p><b>Aug 10–12, 2026.</b> Top 7 on each shore, Airbnb <i>and</i> VRBO. Short version: <b>Donner / north shore is the value play; South Lake charges ~$200 more for the same eight beds.</b></p>
     <p>Tap any card to open that exact listing.</p>
     <div class="legend">
       <span><i class="dot g"></i> price = checkout-confirmed (taxes in)</span>
@@ -73,7 +70,7 @@
   <div class="grid" id="south"></div>
 
   <footer>
-    Prices: 4 are read straight off the Airbnb checkout (taxes in); the rest are estimates = live pre-tax + the parcel's occupancy tax (S. Lake Tahoe / Truckee 12%, Placer / El Dorado 10%, NV Stateline ~13%), confirmed via official sources. Estimates land within a few dollars but aren't booking-final — request-to-book listings only add tax after a host accepts. Prices drift; the live number is on the listing. Built 15-Jun-2026 for Caleb &amp; Briana.
+    Prices: 2 are read straight off the Airbnb checkout (taxes in, green dot); the rest are estimates = live pre-tax + the parcel's occupancy tax (S. Lake Tahoe / Truckee 12%, Placer / El Dorado 10%, NV Stateline ~13%), confirmed via official sources. Estimates land within a few dollars but aren't booking-final — request-to-book listings only add tax after a host accepts. Prices drift; the live number is on the listing. Built 15-Jun-2026 for Caleb &amp; Briana.
   </footer>
 </div>
 
@@ -81,24 +78,26 @@
 const CARDS=[
  {g:"donner",name:"Fort Lost in the Woods",plat:"Airbnb",url:"https://www.airbnb.com/rooms/30749765",img:"https://a0.muscache.com/im/pictures/df0f4378-e5fe-4f5b-b19d-8a0bb7fafce3.jpg",price:"$506",conf:1,loc:"Soda Springs",beds:"2 BR · 4 beds · sleeps 7",rate:"★ 4.99",note:"Cheapest that fits — but 4 beds for 7 means two kids double up.",tag:"Cheapest"},
  {g:"donner",name:"Ski-In/Out Northstar Condo",plat:"Vrbo",url:"https://www.vrbo.com/20203253ha",img:"https://media.vrbo.com/lodging/122000000/121180000/121174200/121174131/5e178789.jpg",price:"≈$682",conf:0,loc:"Northstar",beds:"2 BR · sleeps 8",rate:"8.6/10",note:"Cheapest true 8-sleeper. Gondola views (only 1 bath).",tag:""},
- {g:"donner",name:"Mountain Condo · pool, hot tub, sauna",plat:"Vrbo",url:"https://www.vrbo.com/5177628",img:"https://media.vrbo.com/lodging/128000000/127970000/127960300/127960293/a09189f2.jpg",price:"≈$729",conf:0,loc:"Northstar",beds:"3 BR · sleeps 8",rate:"9.0/10 (77)",note:"Resort amenity stack — pool, hot tub, tennis, sauna.",tag:""},
  {g:"donner",name:"Truckee Cozy Cabin",plat:"Airbnb",url:"https://www.airbnb.com/rooms/24557491",img:"https://a0.muscache.com/im/pictures/c6b91fde-1f85-42c8-8a26-f5411b2fd682.jpg",price:"≈$700",conf:0,loc:"Truckee",beds:"3 BR · 6 beds · sleeps 8",rate:"★ 4.88",note:"A-frame with a kids' double-bunk room + foosball loft. Guest favorite. A whole cabin for ~$20 over the suite.",tag:"Best value ★",star:1},
  {g:"donner",name:"3BR · Dock · Pool · Hot Tub",plat:"Airbnb",url:"https://www.airbnb.com/rooms/1639857272235669364",img:"https://a0.muscache.com/im/pictures/prohost-api/Hosting-1639857272235669364/original/16ed3cbc-39b5-4a5c-918e-8bdd716c6dce.jpeg",price:"$702",conf:1,loc:"Carnelian Bay",beds:"3 BR · 5 beds · sleeps 8",rate:"★ 4.47",note:"Lake dock, shared pool, hot tub.",tag:""},
- {g:"donner",name:"5-Bedroom Cabin · loft + family room",plat:"Vrbo",url:"https://www.vrbo.com/3841979",img:null,price:"≈$796",conf:0,loc:"Donner Summit",beds:"5 BR · sleeps 9",rate:"10/10 (45)",note:"Five real bedrooms and a perfect rating — the roomiest splurge up north.",tag:"Biggest ★",star:1},
+ {g:"donner",name:"Mountain Condo · pool, hot tub, sauna",plat:"Vrbo",url:"https://www.vrbo.com/5177628",img:"https://media.vrbo.com/lodging/128000000/127970000/127960300/127960293/a09189f2.jpg",price:"≈$729",conf:0,loc:"Northstar",beds:"3 BR · sleeps 8",rate:"9.0/10 (77)",note:"Resort amenity stack — pool, hot tub, tennis, sauna.",tag:""},
+ {g:"donner",name:"5-Bedroom Cabin · loft + family room",plat:"Vrbo",url:"https://www.vrbo.com/3841979",img:"https://media.vrbo.com/lodging/103000000/102170000/102169700/102169653/ab8a43ae.jpg",price:"≈$796",conf:0,loc:"Donner Summit",beds:"5 BR · sleeps 9",rate:"10/10 (45)",note:"Five real bedrooms and a perfect rating — the roomiest splurge up north.",tag:"Biggest ★",star:1},
+ {g:"donner",name:"Grand Regency Retreat",plat:"Vrbo",url:"https://www.vrbo.com/20255871ha",img:"https://media.vrbo.com/lodging/127000000/126670000/126662000/126661917/d8e2cebd.jpg",price:"≈$804",conf:0,loc:"Tahoe Vista",beds:"3 BR · sleeps 8 · house",rate:"9.2/10 (62)",note:"A proper house instead of a condo, well-reviewed, near Northstar.",tag:""},
  {g:"south",name:"Lake Tahoe Resort",plat:"Airbnb",url:"https://www.airbnb.com/rooms/11088370",img:"https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEwODgzNzA=/original/03a42bc2-b955-4ca1-a535-6ea8634cf997.png",price:"≈$589",conf:0,loc:"Stateline",beds:"3 BR · 5 beds · sleeps 7",rate:"★ 4.80",note:"Cheapest south-shore fit, minutes from Heavenly.",tag:"Cheapest"},
  {g:"south",name:"Heavenly \"Tree\" House",plat:"Airbnb",url:"https://www.airbnb.com/rooms/770865061618924340",img:"https://a0.muscache.com/im/pictures/46ad6ab4-ba2c-4e77-ad07-0fcd0443e168.jpg",price:"≈$749",conf:0,loc:"Stateline",beds:"3 BR · sleeps 8",rate:"★ 4.86",note:"Pet-friendly, tucked near Heavenly.",tag:""},
+ {g:"south",name:"Cozy Double Loft Cabin",plat:"Airbnb",url:"https://www.airbnb.com/rooms/1840019",img:"https://a0.muscache.com/im/pictures/25761127/eeed3620_original.jpg",price:"≈$750",conf:0,loc:"South Lake Tahoe",beds:"3 BR · 6 beds · sleeps 8",rate:"★ 4.39",note:"Budget SLT-city cabin — but only 1 bath and a softer rating.",tag:""},
+ {g:"south",name:"Tahoe Sky Nest · Heavenly views",plat:"Airbnb",url:"https://www.airbnb.com/rooms/1920271",img:"https://a0.muscache.com/im/pictures/26634020/b83f5938_original.jpg",price:"≈$838",conf:0,loc:"Kingsbury",beds:"4 BR · 6 beds · sleeps 8",rate:"★ 4.68",note:"Four bedrooms with Heavenly views on the Kingsbury side.",tag:""},
+ {g:"south",name:"Sky-High Tahoe Retreat",plat:"Vrbo",url:"https://www.vrbo.com/4931503",img:"https://media.vrbo.com/lodging/123000000/122390000/122386700/122386676/f42b276c.jpg",price:"≈$903",conf:0,loc:"Stateline",beds:"3 BR · 1.5 ba · sleeps 8",rate:"9.4/10",note:"Valley views, walkable to slopes and lake.",tag:""},
  {g:"south",name:"< 1 Mi to Heavenly Lifts · Townhome",plat:"Vrbo",url:"https://www.vrbo.com/9662504ha",img:"https://media.vrbo.com/lodging/76000000/75780000/75773400/75773308/76f46564.jpg",price:"≈$910",conf:0,loc:"Stateline",beds:"3 BR · 3.5 ba · sleeps 8",rate:"9.8/10 (12)",note:"Highest-rated of the whole list. Steps from the lifts.",tag:"Top rated ★",star:1},
- {g:"south",name:"Large, Comfortable 4-BR House",plat:"Vrbo",url:"https://www.vrbo.com/296232",img:null,price:"≈$946",conf:0,loc:"South Lake Tahoe",beds:"4 BR · sleeps 8",rate:"8.6/10 (165)",note:"Four bedrooms, 2 minutes to the beach, 165 reviews.",tag:""}
+ {g:"south",name:"Large, Comfortable 4-BR House",plat:"Vrbo",url:"https://www.vrbo.com/296232",img:"https://media.vrbo.com/lodging/34000000/33490000/33483900/33483857/d16e68c2.jpg",price:"≈$946",conf:0,loc:"South Lake Tahoe",beds:"4 BR · sleeps 8",rate:"8.6/10 (165)",note:"Four bedrooms, 2 minutes to the beach, 165 reviews.",tag:""}
 ];
 function card(c){
   const a=document.createElement("a");
   a.className="card";a.href=c.url;a.target="_blank";a.rel="noopener";
   const conf=c.conf?'<i class="dot g"></i>':'<i class="dot a"></i>';
   const tag=c.tag?`<div class="tag${c.star?' star':''}">${c.tag}</div>`:"";
-  const ph=c.img
-    ? `<div class="ph"><img loading="lazy" src="${c.img}" alt="${c.name}">${tag}<div class="price">${conf}${c.price}</div></div>`
-    : `<div class="ph noimg"><span><span class="mtn">🏔️</span>${c.name}</span>${tag}<div class="price">${conf}${c.price}</div></div>`;
-  a.innerHTML=ph+`<div class="body">
+  a.innerHTML=`<div class="ph"><img loading="lazy" src="${c.img}" alt="${c.name}">${tag}<div class="price">${conf}${c.price}</div></div>`+
+   `<div class="body">
      <div class="name">${c.name}</div>
      <div class="meta"><span>📍 ${c.loc}</span><span>🛏️ ${c.beds}</span></div>
      <div class="rate">${c.rate}</div>
