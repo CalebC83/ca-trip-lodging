@@ -51,7 +51,7 @@
   <header class="hero">
     <h1>🏔️ Tahoe Lodging — 2 nights, family of 7</h1>
     <p><b>Aug 10–12, 2026.</b> The real shortlist after checking Airbnb <i>and</i> VRBO on both shores. Short version: <b>Donner / north shore is the value play; South Lake charges ~$200 more for the same eight beds.</b></p>
-    <p>Tap any card to open the listing. VRBO cards open that town's price-sorted board (the named place sits near the top).</p>
+    <p>Tap any card to open that exact listing.</p>
     <div class="legend">
       <span><i class="dot g"></i> price = checkout-confirmed (taxes in)</span>
       <span><i class="dot a"></i> ≈ price = estimate (pre-tax + local tax; confirm at booking)</span>
@@ -78,20 +78,17 @@
 </div>
 
 <script>
-const TRUCKEE="https://www.vrbo.com/search?destination=Truckee%2C%20California%2C%20United%20States%20of%20America&startDate=2026-08-10&endDate=2026-08-12&adults=7&sort=PRICE_LOW_TO_HIGH";
-const SOUTHB="https://www.vrbo.com/search?destination=South%20Lake%20Tahoe%2C%20California%2C%20United%20States%20of%20America&startDate=2026-08-10&endDate=2026-08-12&adults=7&sort=PRICE_LOW_TO_HIGH";
 const CARDS=[
  {g:"donner",name:"Fort Lost in the Woods",plat:"Airbnb",url:"https://www.airbnb.com/rooms/30749765",img:"https://a0.muscache.com/im/pictures/df0f4378-e5fe-4f5b-b19d-8a0bb7fafce3.jpg",price:"$506",conf:1,loc:"Soda Springs",beds:"2 BR · 4 beds · sleeps 7",rate:"★ 4.99",note:"Cheapest that fits — but 4 beds for 7 means two kids double up.",tag:"Cheapest"},
- {g:"donner",name:"Ski-In/Out Northstar Condo",plat:"Vrbo",url:TRUCKEE,img:"https://media.vrbo.com/lodging/122000000/121180000/121174200/121174131/5e178789.jpg",price:"≈$682",conf:0,loc:"Northstar",beds:"2 BR · sleeps 8",rate:"8.6/10",note:"Cheapest true 8-sleeper. Gondola views (only 1 bath).",tag:""},
- {g:"donner",name:"Mountain Condo · pool, hot tub, sauna",plat:"Vrbo",url:TRUCKEE,img:"https://media.vrbo.com/lodging/128000000/127970000/127960300/127960293/a09189f2.jpg",price:"≈$729",conf:0,loc:"Northstar",beds:"3 BR · sleeps 8",rate:"9.0/10 (77)",note:"Resort amenity stack — pool, hot tub, tennis, sauna.",tag:""},
+ {g:"donner",name:"Ski-In/Out Northstar Condo",plat:"Vrbo",url:"https://www.vrbo.com/20203253ha",img:"https://media.vrbo.com/lodging/122000000/121180000/121174200/121174131/5e178789.jpg",price:"≈$682",conf:0,loc:"Northstar",beds:"2 BR · sleeps 8",rate:"8.6/10",note:"Cheapest true 8-sleeper. Gondola views (only 1 bath).",tag:""},
+ {g:"donner",name:"Mountain Condo · pool, hot tub, sauna",plat:"Vrbo",url:"https://www.vrbo.com/5177628",img:"https://media.vrbo.com/lodging/128000000/127970000/127960300/127960293/a09189f2.jpg",price:"≈$729",conf:0,loc:"Northstar",beds:"3 BR · sleeps 8",rate:"9.0/10 (77)",note:"Resort amenity stack — pool, hot tub, tennis, sauna.",tag:""},
  {g:"donner",name:"Truckee Cozy Cabin",plat:"Airbnb",url:"https://www.airbnb.com/rooms/24557491",img:"https://a0.muscache.com/im/pictures/c6b91fde-1f85-42c8-8a26-f5411b2fd682.jpg",price:"≈$700",conf:0,loc:"Truckee",beds:"3 BR · 6 beds · sleeps 8",rate:"★ 4.88",note:"A-frame with a kids' double-bunk room + foosball loft. Guest favorite. A whole cabin for ~$20 over the suite.",tag:"Best value ★",star:1},
  {g:"donner",name:"3BR · Dock · Pool · Hot Tub",plat:"Airbnb",url:"https://www.airbnb.com/rooms/1639857272235669364",img:"https://a0.muscache.com/im/pictures/prohost-api/Hosting-1639857272235669364/original/16ed3cbc-39b5-4a5c-918e-8bdd716c6dce.jpeg",price:"$702",conf:1,loc:"Carnelian Bay",beds:"3 BR · 5 beds · sleeps 8",rate:"★ 4.47",note:"Lake dock, shared pool, hot tub.",tag:""},
- {g:"donner",name:"5-Bedroom Cabin · loft + family room",plat:"Vrbo",url:TRUCKEE,img:null,price:"≈$796",conf:0,loc:"Donner Summit",beds:"5 BR · sleeps 9",rate:"10/10 (45)",note:"Five real bedrooms and a perfect rating — the roomiest splurge up north.",tag:"Biggest ★",star:1},
+ {g:"donner",name:"5-Bedroom Cabin · loft + family room",plat:"Vrbo",url:"https://www.vrbo.com/3841979",img:null,price:"≈$796",conf:0,loc:"Donner Summit",beds:"5 BR · sleeps 9",rate:"10/10 (45)",note:"Five real bedrooms and a perfect rating — the roomiest splurge up north.",tag:"Biggest ★",star:1},
  {g:"south",name:"Lake Tahoe Resort",plat:"Airbnb",url:"https://www.airbnb.com/rooms/11088370",img:"https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEwODgzNzA=/original/03a42bc2-b955-4ca1-a535-6ea8634cf997.png",price:"≈$589",conf:0,loc:"Stateline",beds:"3 BR · 5 beds · sleeps 7",rate:"★ 4.80",note:"Cheapest south-shore fit, minutes from Heavenly.",tag:"Cheapest"},
  {g:"south",name:"Heavenly \"Tree\" House",plat:"Airbnb",url:"https://www.airbnb.com/rooms/770865061618924340",img:"https://a0.muscache.com/im/pictures/46ad6ab4-ba2c-4e77-ad07-0fcd0443e168.jpg",price:"≈$749",conf:0,loc:"Stateline",beds:"3 BR · sleeps 8",rate:"★ 4.86",note:"Pet-friendly, tucked near Heavenly.",tag:""},
- {g:"south",name:"< 1 Mi to Heavenly Lifts · Townhome",plat:"Vrbo",url:SOUTHB,img:"https://media.vrbo.com/lodging/76000000/75780000/75773400/75773308/76f46564.jpg",price:"≈$910",conf:0,loc:"Stateline",beds:"3 BR · 3.5 ba · sleeps 8",rate:"9.8/10 (12)",note:"Highest-rated of the whole list. Steps from the lifts.",tag:"Top rated ★",star:1},
- {g:"south",name:"Large, Comfortable 4-BR House",plat:"Vrbo",url:SOUTHB,img:null,price:"≈$946",conf:0,loc:"South Lake Tahoe",beds:"4 BR · sleeps 8",rate:"8.6/10 (165)",note:"Four bedrooms, 2 minutes to the beach, 165 reviews.",tag:""},
- {g:"south",name:"Pro-Decorated 4-BR · hot tub + theater",plat:"Vrbo",url:SOUTHB,img:null,price:"≈$1,049",conf:0,loc:"Montgomery Estates",beds:"4 BR · 3 ba · sleeps 8",rate:"9.2/10 (87)",note:"Private hot tub and a home theater — top of the splurge.",tag:""}
+ {g:"south",name:"< 1 Mi to Heavenly Lifts · Townhome",plat:"Vrbo",url:"https://www.vrbo.com/9662504ha",img:"https://media.vrbo.com/lodging/76000000/75780000/75773400/75773308/76f46564.jpg",price:"≈$910",conf:0,loc:"Stateline",beds:"3 BR · 3.5 ba · sleeps 8",rate:"9.8/10 (12)",note:"Highest-rated of the whole list. Steps from the lifts.",tag:"Top rated ★",star:1},
+ {g:"south",name:"Large, Comfortable 4-BR House",plat:"Vrbo",url:"https://www.vrbo.com/296232",img:null,price:"≈$946",conf:0,loc:"South Lake Tahoe",beds:"4 BR · sleeps 8",rate:"8.6/10 (165)",note:"Four bedrooms, 2 minutes to the beach, 165 reviews.",tag:""}
 ];
 function card(c){
   const a=document.createElement("a");
