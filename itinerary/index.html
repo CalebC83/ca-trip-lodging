@@ -108,6 +108,27 @@
   .chip.warn{background:var(--maybe-bg);color:var(--maybe);font-weight:600}
   .chip.joy{background:var(--vac-bg);color:var(--vac);font-weight:600}
   .chip.long{white-space:normal;line-height:1.35}
+  .lede{font-size:.86rem;color:var(--mute);margin:0 0 8px}
+  .day{cursor:pointer}
+  .day:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .more{margin-top:auto;padding-top:6px;font-size:.72rem;font-weight:650;color:var(--accent);opacity:.85}
+  dialog#dd{border:none;border-radius:16px;padding:0;max-width:560px;width:calc(100% - 32px);
+    background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.32)}
+  dialog#dd::backdrop{background:rgba(12,14,18,.55);backdrop-filter:blur(2px)}
+  .dd-h{padding:18px 22px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--card);
+    border-radius:16px 16px 0 0}
+  .dd-date{font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-weight:650}
+  .dd-h h3{margin:2px 0 0;font-size:1.25rem;letter-spacing:-.01em}
+  .dd-b{padding:16px 22px 22px;font-size:.93rem;line-height:1.55;max-height:70vh;overflow-y:auto}
+  .dd-b p{margin:0 0 11px}
+  .dd-b h4{margin:16px 0 7px;font-size:.95rem}
+  .dd-b ul{margin:0 0 11px;padding-left:20px}
+  .dd-b li{margin-bottom:4px}
+  .dd-b .warn-p{background:var(--maybe-bg);color:var(--maybe);padding:10px 13px;border-radius:9px}
+  .dd-b .warn-p b{color:inherit}
+  .dd-x{position:absolute;top:14px;right:16px;border:none;background:var(--work-bg);color:var(--mute);
+    width:30px;height:30px;border-radius:50%;font-size:1rem;cursor:pointer;line-height:1}
+  .dd-x:hover{background:var(--line)}
   .chip a{color:inherit}
   .bella{width:1.25em;height:1.25em;vertical-align:-.3em;object-fit:contain;flex:none}
   .fact .bella{width:1.5em;height:1.5em;vertical-align:-.42em;margin-right:2px}
@@ -193,20 +214,23 @@
     <article class="day home">
       <div class="dhead"><span class="dnum">2</span><span class="dow">Sun</span></div>
       <div class="dbody"><h3>Still in Texas</h3>
-        <p>Normal Sunday. Working this one would have bought back a vacation day — we're skipping that.</p></div>
+        <p class="lede">Normal Sunday at home.</p>
+        <template class="detail"><p>Normal Sunday at home. Working it would have bought back a vacation day — we're skipping that.</p></template></div>
     </article>
 
     <article class="day home">
       <div class="dhead"><span class="dnum">3</span><span class="dow">Mon</span></div>
-      <div class="dbody"><h3>Pack</h3><p>Last day at home. Bags, chargers, Ellie's booster.</p></div>
+      <div class="dbody"><h3>Pack</h3><p class="lede">Bags, chargers, Ellie's booster.</p>
+        <template class="detail"><p>Last day at home. Bags, chargers, Ellie's booster seat.</p> <p class="warn-p">Check in for tomorrow's flight at <b>9:40am sharp</b> — exactly 24 hours ahead. Seats are assigned at check-in, so late check-in means boarding last.</p></template></div>
     </article>
 
     <article class="day trav">
       <div class="dhead"><span class="dnum">4</span><span class="dow">Tue</span><span class="tag t-trav">Travel</span></div>
       <div class="dphoto"><img src="img/sfo.jpg" alt="San Francisco International Airport" loading="lazy"></div>
       <div class="dbody"><h3>Fly to California</h3>
-        <p>Out of Houston Hobby at <b>9:40am</b>, change planes in Phoenix, into <b>SFO at 1:15pm</b>. Then the van and the drive to <b>Knightsen</b> (~55 mi) — at the house mid-afternoon. Groceries.</p>
+        <p class="lede">Fly to San Francisco, drive to Knightsen.</p>
         <div class="chips"><span class="chip">✈️ WN380 / WN3260</span><span class="chip">🛬 lands 1:15pm</span><span class="chip warn long">check in Mon 3rd, 9:40am sharp</span></div>
+        <template class="detail"><h4>Southwest AG24V4 · all 7 of us</h4> <ul><li><b>9:40am</b> — depart Houston Hobby (HOU)</li> <li>plane change at <b>Phoenix</b></li> <li><b>1:15pm</b> — arrive San Francisco (SFO)</li> <li>WN380 + WN3260 · 737 MAX8 · 5h 35m</li></ul> <p>Collect the Turo van, then ~55 mi out to Knightsen. Realistically at the house mid-afternoon.</p> <p>Grocery run once we've dumped the bags.</p></template>
       </div>
     </article>
 
@@ -214,8 +238,9 @@
       <div class="dhead"><span class="dnum">5</span><span class="dow">Wed</span><span class="tag t-vac">Dad off</span></div>
       <div class="dphoto"><img src="img/muirwoods.jpg" alt="Redwoods at Muir Woods National Monument" loading="lazy"></div>
       <div class="dbody"><h3>Muir Woods &amp; Muir Beach</h3>
-        <p>Redwoods in the morning, beach in the afternoon. Coast redwoods you can't see anywhere else.</p>
+        <p class="lede">Redwoods in the morning, beach after.</p>
         <div class="chips"><span class="chip warn">⚠️ book parking ahead</span><span class="chip">~65 mi</span></div>
+        <template class="detail"><p><b>Muir Woods</b> for the coast redwoods, then <b>Muir Beach</b> in the afternoon. About 65 miles each way.</p> <p class="warn-p">⚠️ Muir Woods requires a <b>parking or shuttle reservation booked in advance</b> at gomuirwoods.com. Summer slots sell out and there is no walk-up option. Book this before we fly.</p> <p>Dad's off.</p></template>
       </div>
     </article>
 
@@ -226,8 +251,9 @@
         <img src="img/blackdiamond.jpg" alt="Black Diamond Mines Regional Preserve" loading="lazy">
       </div>
       <div class="dbody"><h3>Brentwood U-pick + Black Diamond Mines</h3>
-        <p>Close-to-home day. Pick fruit in the morning, then the <b>underground mine tour</b> at Black Diamond in the afternoon.</p>
+        <p class="lede">Fruit picking, then the mine tour.</p>
         <div class="chips"><span class="chip">⛏️ mine tour</span><span class="chip">🍑 August = peaches</span></div>
+        <template class="detail"><p>Close-to-home day. <b>Brentwood u-pick</b> in the morning — August means peaches and apples, not cherries; cherry season ends mid-June.</p> <p>Afternoon: the <b>underground mine tour</b> at Black Diamond Mines Regional Preserve.</p> <p>Dad's working.</p></template>
       </div>
     </article>
 
@@ -235,8 +261,9 @@
       <div class="dhead"><span class="dnum">7</span><span class="dow">Fri</span><span class="tag t-vac">Dad off</span></div>
       <div class="dphoto"><img src="img/pointreyes.jpg" alt="Cypress Tree Tunnel at Point Reyes" loading="lazy"></div>
       <div class="dbody"><h3>Point Reyes</h3>
-        <p>Cypress Tree Tunnel, the tule elk, and a beach. Pick two or three stops and don't rush it.</p>
+        <p class="lede">Point Reyes — tunnel, elk, a beach.</p>
         <div class="chips"><span class="chip warn">skip the lighthouse</span><span class="chip">~85 mi</span></div>
+        <template class="detail"><p>About 85 miles out. Pick two or three stops and don't rush it:</p> <ul><li>Cypress Tree Tunnel</li><li>The tule elk reserve</li><li>One beach</li></ul> <p class="warn-p">Skip the lighthouse with the little ones — roughly 45 minutes each way plus 300-odd stairs.</p> <p>Dad's off.</p></template>
       </div>
     </article>
 
@@ -244,8 +271,9 @@
       <div class="dhead"><span class="dnum">8</span><span class="dow">Sat</span><span class="tag t-work">Dad works</span></div>
       <div class="dphoto"><img class="top" src="img/grandpa.jpg" alt="On the tractor at Grandma and Grandpa's place in Knightsen" loading="lazy"></div>
       <div class="dbody"><h3>Slow day at Grandma &amp; Grandpa's</h3>
-        <p>Nothing booked. Pool, the tractor, and whatever else the place turns up. Dad's working.</p>
+        <p class="lede">Nothing booked. Pool and the farm.</p>
         <div class="chips"><span class="chip">🏊 pool</span><span class="chip">🚜 the farm</span></div>
+        <template class="detail"><p>Slow day at Grandma &amp; Grandpa's. Pool, the tractor, whatever the place turns up.</p> <p>Dad's working — and this worked Saturday buys back an earlier day in the same week, so it's load-bearing for the vacation ledger.</p></template>
       </div>
     </article>
 
@@ -265,8 +293,9 @@
       <div class="dhead"><span class="dnum">9</span><span class="dow">Sun</span><span class="tag t-work">Dad works</span></div>
       <div class="dphoto"><img src="img/diablo.jpg" alt="Mount Diablo summit" loading="lazy"></div>
       <div class="dbody"><h3>Aliyah turns 15 🎂</h3>
-        <p>Church in the morning, then something local. <b>Mt. Diablo</b> in the evening if there's steam left — on a clear day you can see the Sierra from the top.</p>
+        <p class="lede">Aliyah's 15th. Church, then local.</p>
         <div class="chips"><span class="chip joy">🎂 Aliyah's birthday</span></div>
+        <template class="detail"><h4>🎂 Aliyah turns 15</h4> <p>Church in the morning, then something local.</p> <p><b>Mt. Diablo</b> in the evening if there's steam left — on a clear day you can see the Sierra from the summit.</p> <p>Dad's working; this worked Sunday buys back a later day in the same week.</p></template>
       </div>
     </article>
 
@@ -274,8 +303,9 @@
       <div class="dhead"><span class="dnum">10</span><span class="dow">Mon</span><span class="tag t-work">Dad works</span></div>
       <div class="dphoto"><img src="img/roundvalley.jpg" alt="Oak-lined fire road at Round Valley Regional Preserve" loading="lazy"></div>
       <div class="dbody"><h3>Round Valley — local hiking</h3>
-        <p>Easy day close to home. A hike out at <b>Round Valley Regional Preserve</b> in the oak grassland — one of Dad's old favorites.</p>
+        <p class="lede">Local hike at Round Valley.</p>
         <div class="chips"><span class="chip">🥾 local trail</span><span class="chip warn long">🚂 Sacramento Railroad Museum, if we've got the energy</span></div>
+        <template class="detail"><p>Easy day close to home — a hike at <b>Round Valley Regional Preserve</b> in the oak grassland. One of Dad's old favourites.</p> <p>If there's energy left over, the <b>Sacramento Railroad Museum</b> is the stretch option. Check its Monday hours first.</p> <p>Dad's working.</p></template>
       </div>
     </article>
 
@@ -286,8 +316,9 @@
         <img src="img/calaveras_hollow.jpg" alt="Inside a hollow sequoia trunk at Calaveras Big Trees" loading="lazy">
       </div>
       <div class="dbody"><h3>Calaveras Big Trees</h3>
-        <p>Giant sequoias — the fat ones, not the tall skinny redwoods from last week. Easy loop trail through the North Grove.</p>
+        <p class="lede">Giant sequoias at Calaveras.</p>
         <div class="chips"><span class="chip">🌲 ~115 mi</span></div>
+        <template class="detail"><p><b>Calaveras Big Trees State Park</b>, about 115 miles. Giant sequoias — the fat ones, not the tall skinny coast redwoods from the 5th.</p> <p>Easy loop trail through the North Grove.</p> <p>Dad likely takes this as a vacation day, which adds 8 hours to the ledger.</p></template>
       </div>
     </article>
 
@@ -295,8 +326,9 @@
       <div class="dhead"><span class="dnum">12</span><span class="dow">Wed</span><span class="tag t-work">Dad works</span></div>
       <div class="dphoto"><img src="img/homeday.jpg" alt="Riding the quad at Grandma and Grandpa's" loading="lazy"></div>
       <div class="dbody"><h3>Home day · pack for Tahoe</h3>
-        <p>Pool, laundry, and get everything staged for two nights in the mountains.</p>
+        <p class="lede">Home day. Laundry and packing.</p>
         <div class="chips"><span class="chip">🧺 laundry</span><span class="chip">🎒 pack</span></div>
+        <template class="detail"><p>Pool, laundry, and stage everything for two nights in the mountains.</p> <p>Pack for Tahoe tonight — we leave in the morning and it's a 3½ hour drive.</p> <p>Dad's working.</p></template>
       </div>
     </article>
 
@@ -305,8 +337,9 @@
       <div class="dhead"><span class="dnum">13</span><span class="dow">Thu</span><span class="tag t-vac">Dad off</span></div>
       <div class="dphoto"><img src="img/tahoe.jpg" alt="Emerald Bay, Lake Tahoe" loading="lazy"></div>
       <div class="dbody"><h3>Drive up to Tahoe</h3>
-        <p>About 3½ hours up. Check into <b>Pine Cone the Awesome</b> in Sunnyside — all ten of us plus Beth, A'maya and Tyler meeting us there.</p>
+        <p class="lede">Drive up to Tahoe. Check in.</p>
         <div class="chips"><span class="chip k">🏔️ Sunnyside</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
+        <template class="detail"><p>About 3½ hours up to the west shore.</p> <p>Check into <b>Pine Cone the Awesome</b> in Sunnyside — all ten of us, plus <b>Beth, A'maya and Tyler</b> meeting us there.</p> <p><b>Bella Boo comes</b> — the cabin is dog-friendly.</p></template>
       </div>
     </article>
 
@@ -315,8 +348,9 @@
       <div class="dhead"><span class="dnum">14</span><span class="dow">Fri</span><span class="tag t-vac">Dad off</span></div>
       <div class="dphoto"><img src="img/tahoebeach.jpg" alt="Sandy beach and clear water on Lake Tahoe's west shore" loading="lazy"></div>
       <div class="dbody"><h3>The big Tahoe day</h3>
-        <p><b>Meeks Bay</b> for swimming — sand and shallow water, and it's just down the west shore from the cabin. Then <b>Emerald Bay</b> for the view, and the walk down to <b>Vikingsholm</b> if everyone's up for the climb back. <b>Pope</b> or <b>Kiva</b> are the south-shore option if we end up round that side.</p>
+        <p class="lede">Swim at Meeks Bay, then Emerald Bay.</p>
         <div class="chips"><span class="chip k">🏖️ Meeks Bay</span><span class="chip k">⛰️ Emerald Bay</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
+        <template class="detail"><p><b>Meeks Bay</b> for swimming — sand and shallow water, and it's just down the west shore from the cabin rather than the 25–30 miles round to the south shore.</p> <p><b>Emerald Bay</b> for the view, and the walk down to <b>Vikingsholm</b> if everyone's up for the climb back out.</p> <p>Pope or Kiva Beach are the south-shore alternative if we end up round that side anyway.</p></template>
       </div>
     </article>
 
@@ -324,8 +358,9 @@
       <div class="ribbon">Tahoe · out</div>
       <div class="dhead"><span class="dnum">15</span><span class="dow">Sat</span><span class="tag t-vac">Dad off</span></div>
       <div class="dbody"><h3>Tahoe morning, then home</h3>
-        <p>One last morning at the lake, then the drive back down to Knightsen.</p>
+        <p class="lede">Last morning at the lake, then home.</p>
         <div class="chips"><span class="chip k">🚗 ~3½ hr</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
+        <template class="detail"><p>One more morning on the water, then the 3½ hour drive back down to Knightsen.</p> <p>Dad's off — and note this Saturday used to be a work day. Moving Tahoe here is what cost the extra vacation day.</p></template>
       </div>
     </article>
 
@@ -345,8 +380,9 @@
       <div class="dhead"><span class="dnum">16</span><span class="dow">Sun</span><span class="tag t-vac">Dad off</span></div>
       <div class="dphoto"><img src="img/monterey.jpg" alt="Tide pool at Asilomar State Beach" loading="lazy"></div>
       <div class="dbody"><h3>Monterey — aquarium &amp; tide pools</h3>
-        <p>Down after a late-morning start. <b>Aquarium</b> in the early afternoon, then the <b>tide pools</b> at Pacific Grove / Asilomar as the water drops through the evening. Skipping church.</p>
+        <p class="lede">Monterey — aquarium, then tide pools.</p>
         <div class="chips"><span class="chip warn long">🌊 low tide 8:22pm — reef best from about 6:45</span><span class="chip">🌅 sunset 7:58pm</span><span class="chip">🔦 headlamps</span><span class="chip">~140 mi</span></div>
+        <template class="detail"><h4>The tide is why this day exists</h4> <p>Late-morning start, roughly 140 miles down. <b>Aquarium</b> in the early afternoon, then the <b>tide pools</b> at Pacific Grove / Asilomar as the water drops.</p> <ul><li><b>6:45pm</b> — reef starts working</li> <li><b>7:58pm</b> — sunset</li> <li><b>8:22pm</b> — low tide, +1.4 ft</li> <li><b>8:24pm</b> — full dark</li></ul> <p>Every genuinely good low tide on this trip lands before dawn. This is the only evening one with light still on it.</p> <p class="warn-p">⚠️ <b>No collecting.</b> Asilomar is a State Marine Reserve and taking marine wildlife is prohibited along the Pacific Grove coastline. Look, don't pocket.</p> <p>Bring headlamps for the walk back off the rocks. Parking is roadside on Sunset Drive — arrive about an hour before sundown. <b>Skipping church.</b></p></template>
       </div>
     </article>
 
@@ -356,8 +392,9 @@
       <div class="dbody">
         <span class="pick">Leaning skip</span>
         <h3>Santa Cruz Boardwalk <i>or</i> buffer day</h3>
-        <p>On the calendar as a maybe. Leaning toward skipping it so we're not doing a mountain of laundry the night before we fly.</p>
+        <p class="lede">Buffer day. Pack.</p>
         <div class="chips"><span class="chip">🧺 pack &amp; laundry</span></div>
+        <template class="detail"><p>On the calendar as a maybe: <b>Santa Cruz Boardwalk</b>. Leaning toward skipping it so we're not facing a mountain of laundry the night before we fly.</p> <p class="warn-p">Check in for tomorrow's flight at <b>1:55pm sharp</b> — exactly 24 hours ahead.</p> <p>Dad's working.</p></template>
       </div>
     </article>
 
@@ -365,8 +402,9 @@
       <div class="dhead"><span class="dnum">18</span><span class="dow">Tue</span><span class="tag t-trav">Travel</span></div>
       <div class="dphoto"><img src="img/sfo.jpg" alt="San Francisco International Airport" loading="lazy"></div>
       <div class="dbody"><h3>Fly home</h3>
-        <p>Van back to SFO by noon. Wheels up <b>1:55pm</b>, change planes in Dallas, into <b>Houston Hobby at 9:35pm</b>. Long one.</p>
+        <p class="lede">Van back to SFO, fly home.</p>
         <div class="chips"><span class="chip">✈️ WN1184 / WN57</span><span class="chip">🚐 van back by noon</span><span class="chip warn long">check in Mon 17th, 1:55pm sharp</span></div>
+        <template class="detail"><h4>Southwest AG24V4 · all 7 of us</h4> <p>Van back to SFO by noon.</p> <ul><li><b>1:55pm</b> — depart San Francisco (SFO)</li> <li>plane change at <b>Dallas</b></li> <li><b>9:35pm</b> — arrive Houston Hobby (HOU)</li> <li>WN1184 + WN57 · 737 MAX8 · 5h 40m</li></ul> <p>Long day, late landing, and back to work the next morning.</p></template>
       </div>
     </article>
 
@@ -429,5 +467,36 @@
 </footer>
 
 </div>
+
+<dialog id="dd">
+  <div class="dd-h"><div class="dd-date" id="ddDate"></div><h3 id="ddTitle"></h3>
+    <button class="dd-x" id="ddX" aria-label="Close">✕</button></div>
+  <div class="dd-b" id="ddBody"></div>
+</dialog>
+
+<script>
+(function(){
+  var dd=document.getElementById('dd'),ddDate=document.getElementById('ddDate'),
+      ddTitle=document.getElementById('ddTitle'),ddBody=document.getElementById('ddBody');
+  document.getElementById('ddX').onclick=function(){dd.close()};
+  dd.addEventListener('click',function(e){if(e.target===dd)dd.close()});
+  document.querySelectorAll('article.day').forEach(function(card){
+    var tpl=card.querySelector('template.detail'); if(!tpl) return;
+    var num=card.querySelector('.dnum'), dow=card.querySelector('.dow'),
+        h3=card.querySelector('h3'), body=card.querySelector('.dbody');
+    if(body){var more=document.createElement('div');more.className='more';more.textContent='Full day →';body.appendChild(more)}
+    card.setAttribute('tabindex','0');
+    card.setAttribute('role','button');
+    function open(){
+      ddDate.textContent=(dow?dow.textContent+' ':'')+'August '+(num?num.textContent:'');
+      ddTitle.textContent=h3?h3.textContent:'';
+      ddBody.innerHTML=tpl.innerHTML;
+      if(typeof dd.showModal==='function')dd.showModal();else dd.setAttribute('open','');
+    }
+    card.addEventListener('click',function(e){if(e.target.closest('a'))return;open()});
+    card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+  });
+})();
+</script>
 </body>
 </html>
