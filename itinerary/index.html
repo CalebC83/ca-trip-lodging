@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California Trip — Aug 4–18, 2026</title>
+<meta name="description" content="Day-by-day plan for the Caldwell family's California trip, Aug 4–18 2026 — Muir Woods, Point Reyes, Monterey tide pools, Tahoe, and the giant sequoias.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="California Trip — Aug 4–18, 2026">
+<meta property="og:description" content="The whole two weeks, day by day: what we're doing, who's going, and when Dad's working.">
+<meta property="og:image" content="https://calebc83.github.io/ca-trip-lodging/itinerary/img/tahoe.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌲</text></svg>">
+<style>
+  :root{
+    --bg:#f6f4ef; --card:#fff; --ink:#20242b; --mute:#6b7280; --line:#e3ded4;
+    --vac:#1f8f5f; --vac-bg:#e7f6ee;
+    --work:#64748b; --work-bg:#eef1f5;
+    --trav:#7159c9; --trav-bg:#efeaff;
+    --tahoe:#0e7c9b; --tahoe-bg:#e2f4fa;
+    --maybe:#c1811f; --maybe-bg:#fdf3e0;
+    --accent:#c4562a;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 14px rgba(16,24,40,.06);
+  }
+  @media(prefers-color-scheme:dark){
+    :root{
+      --bg:#12151a; --card:#1a1f27; --ink:#e8eaee; --mute:#95a0b0; --line:#2b3240;
+      --vac:#4ecf95; --vac-bg:#123125;
+      --work:#93a3b8; --work-bg:#1e242e;
+      --trav:#a893f5; --trav-bg:#241d3d;
+      --tahoe:#4ec6e8; --tahoe-bg:#0d2c37;
+      --maybe:#e6ab52; --maybe-bg:#33270f;
+      --accent:#f0805a;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    -webkit-text-size-adjust:100%}
+  .wrap{max-width:1280px;margin:0 auto;padding:22px 16px 60px}
+
+  /* ---------- header ---------- */
+  header.top{margin-bottom:22px}
+  .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{margin:.25em 0 .15em;font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.1;letter-spacing:-.02em}
+  .sub{margin:0 0 14px;color:var(--mute);font-size:1.02rem}
+  .facts{display:flex;flex-wrap:wrap;gap:8px}
+  .fact{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);
+    border-radius:999px;padding:6px 13px;font-size:.87rem;box-shadow:var(--shadow)}
+  .fact b{font-weight:650}
+
+  /* ---------- legend ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0 26px;padding:12px 15px;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;font-size:.85rem;box-shadow:var(--shadow)}
+  .lg{display:inline-flex;align-items:center;gap:7px;color:var(--mute)}
+  .sw{width:13px;height:13px;border-radius:4px;flex:none}
+  .sw.v{background:var(--vac)} .sw.w{background:var(--work)} .sw.t{background:var(--trav)}
+  .sw.k{background:var(--tahoe)} .sw.m{background:var(--maybe)}
+
+  /* ---------- week ---------- */
+  .week{margin-bottom:26px}
+  .whead{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin:0 2px 10px;
+    padding-bottom:8px;border-bottom:2px solid var(--line)}
+  .wname{font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+  .wrange{color:var(--mute);font-size:.9rem}
+  .wcost{margin-left:auto;font-size:.82rem;color:var(--mute);background:var(--card);
+    border:1px solid var(--line);border-radius:999px;padding:3px 11px}
+  .wcost b{color:var(--ink)}
+
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:stretch}
+
+  /* ---------- day card ---------- */
+  .day{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;
+    box-shadow:var(--shadow);border-top:3px solid var(--line);display:flex;flex-direction:column}
+  .day.vac{border-top-color:var(--vac)}
+  .day.work{border-top-color:var(--work)}
+  .day.trav{border-top-color:var(--trav)}
+  .day.tahoe{border-top-color:var(--tahoe);background:linear-gradient(180deg,var(--tahoe-bg) 0,var(--card) 78px)}
+  .day.maybe{border-style:dashed;border-top-style:solid;border-top-color:var(--maybe)}
+  .day.home{opacity:.62;background:transparent;box-shadow:none}
+
+  .dhead{display:flex;align-items:center;gap:7px;padding:9px 11px 7px}
+  .dnum{font-size:1.4rem;font-weight:750;line-height:1;letter-spacing:-.03em}
+  .dow{font-size:.74rem;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-weight:650}
+  .tag{margin-left:auto;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    padding:3px 8px;border-radius:999px;white-space:nowrap}
+  .t-vac{background:var(--vac-bg);color:var(--vac)}
+  .t-work{background:var(--work-bg);color:var(--work)}
+  .t-trav{background:var(--trav-bg);color:var(--trav)}
+  .t-maybe{background:var(--maybe-bg);color:var(--maybe)}
+
+  .dphoto{display:flex;gap:2px;background:var(--line)}
+  .dphoto img{width:100%;height:104px;object-fit:cover;display:block;flex:1;min-width:0}
+  .dbody{padding:10px 11px 12px;flex:1;display:flex;flex-direction:column}
+  .dbody h3{margin:0 0 5px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em}
+  .dbody p{margin:0 0 8px;font-size:.85rem;color:var(--mute);line-height:1.45}
+  .dbody p b{color:var(--ink);font-weight:620}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+  .chip{font-size:.72rem;padding:2.5px 8px;border-radius:999px;background:var(--work-bg);color:var(--mute);
+    border:1px solid transparent;white-space:nowrap}
+  .chip.k{background:var(--tahoe-bg);color:var(--tahoe)}
+  .chip.warn{background:var(--maybe-bg);color:var(--maybe);font-weight:600}
+  .chip.joy{background:var(--vac-bg);color:var(--vac);font-weight:600}
+  .chip a{color:inherit}
+  .bella{width:1.25em;height:1.25em;vertical-align:-.3em;object-fit:contain;flex:none}
+  .fact .bella{width:1.5em;height:1.5em;vertical-align:-.42em;margin-right:2px}
+  .ribbon{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--tahoe);color:#fff;padding:3px 11px;text-align:center}
+  .pick{font-size:.72rem;font-weight:700;color:var(--maybe);background:var(--maybe-bg);
+    padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px}
+
+  /* ---------- panels ---------- */
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+    box-shadow:var(--shadow)}
+  .panel h2{margin:0 0 4px;font-size:1.12rem;letter-spacing:-.01em}
+  .panel .ph{color:var(--mute);font-size:.85rem;margin:0 0 14px}
+  .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:330px;border-collapse:collapse;font-size:.88rem}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
+  th{font-size:.73rem;text-transform:uppercase;letter-spacing:.07em;color:var(--mute);font-weight:650}
+  td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:650}
+  tr.tot td{border-bottom:none;border-top:2px solid var(--line);font-weight:700;padding-top:10px}
+  .notes{list-style:none;margin:0;padding:0}
+  .notes li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem;line-height:1.5;
+    display:flex;gap:10px}
+  .notes li:last-child{border-bottom:none}
+  .notes .ic{flex:none;font-size:1.05rem;line-height:1.35}
+  .notes b{font-weight:650}
+  a{color:var(--accent)}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:var(--mute);
+    font-size:.76rem;line-height:1.6}
+  footer .cred{margin-top:7px;font-size:.71rem;opacity:.85}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:1150px){ .days{grid-template-columns:repeat(4,1fr)} }
+  @media(max-width:860px){ .days{grid-template-columns:repeat(2,1fr)} .panels{grid-template-columns:1fr} }
+  @media(max-width:560px){
+    .days{grid-template-columns:1fr;gap:8px}
+    .day{flex-direction:row;align-items:stretch}
+    .day .dhead{flex-direction:column;align-items:flex-start;gap:2px;padding:11px 0 11px 10px;
+      width:70px;flex:none;justify-content:flex-start}
+    .day .tag{margin-left:0;margin-top:5px;font-size:.58rem;padding:2px 6px;
+      white-space:normal;line-height:1.25;letter-spacing:.03em}
+    .dphoto{flex:none;width:84px;flex-direction:column;min-height:88px}
+    .dphoto img{height:auto;flex:1 1 0;min-height:0}
+    .dbody{padding:11px}
+    .ribbon{display:none}
+    .day.home .dbody{padding:11px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">Caldwell family · summer 2026</div>
+  <h1>California — August 4 to 18</h1>
+  <p class="sub">Two weeks out of Knightsen, with a two-night run up to Tahoe in the middle.</p>
+  <div class="facts">
+    <span class="fact">✈️ <b>SFO</b> in Tue Aug 4 · out Tue Aug 18</span>
+    <span class="fact">🏡 Basecamp <b>Grandma &amp; Grandpa's</b>, Knightsen</span>
+    <span class="fact">🚐 <b>Grand Caravan</b> · 2,100 mi included</span>
+    <span class="fact">🏔️ Tahoe <b>Aug 13–15</b> · 10 of us</span>
+    <span class="fact"><img class="bella" src="img/bella.png" alt="Bella Boo"> <b>Bella Boo</b> comes to Tahoe</span>
+  </div>
+</header>
+
+<div class="legend">
+  <span class="lg"><i class="sw v"></i> Dad's off</span>
+  <span class="lg"><i class="sw w"></i> Dad's working (family still goes)</span>
+  <span class="lg"><i class="sw t"></i> Travel day</span>
+  <span class="lg"><i class="sw k"></i> Tahoe</span>
+  <span class="lg"><i class="sw m"></i> Not decided yet</span>
+</div>
+
+<!-- ============ WEEK A ============ -->
+<section class="week">
+  <div class="whead">
+    <span class="wname">Week One</span>
+    <span class="wrange">Sun Aug 2 – Sat Aug 8</span>
+    <span class="wcost">vacation charged: <b>2 days</b></span>
+  </div>
+  <div class="days">
+
+    <article class="day home">
+      <div class="dhead"><span class="dnum">2</span><span class="dow">Sun</span></div>
+      <div class="dbody"><h3>Still in Texas</h3>
+        <p>Normal Sunday. Working this one would have bought back a vacation day — we're skipping that.</p></div>
+    </article>
+
+    <article class="day home">
+      <div class="dhead"><span class="dnum">3</span><span class="dow">Mon</span></div>
+      <div class="dbody"><h3>Pack</h3><p>Last day at home. Bags, chargers, Ellie's booster.</p></div>
+    </article>
+
+    <article class="day trav">
+      <div class="dhead"><span class="dnum">4</span><span class="dow">Tue</span><span class="tag t-trav">Travel</span></div>
+      <div class="dphoto"><img src="img/sfo.jpg" alt="San Francisco International Airport" loading="lazy"></div>
+      <div class="dbody"><h3>Fly to California</h3>
+        <p>Land at SFO around midday, pick up the van, drive out to <b>Knightsen</b> (~55 mi). Settle in, grocery run.</p>
+        <div class="chips"><span class="chip">✈️ arrive ~noon</span><span class="chip">🛒 groceries</span></div>
+      </div>
+    </article>
+
+    <article class="day vac">
+      <div class="dhead"><span class="dnum">5</span><span class="dow">Wed</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dphoto"><img src="img/muirwoods.jpg" alt="Redwoods at Muir Woods National Monument" loading="lazy"></div>
+      <div class="dbody"><h3>Muir Woods &amp; Muir Beach</h3>
+        <p>Redwoods in the morning, beach in the afternoon. Coast redwoods you can't see anywhere else.</p>
+        <div class="chips"><span class="chip warn">⚠️ book parking ahead</span><span class="chip">~65 mi</span></div>
+      </div>
+    </article>
+
+    <article class="day work">
+      <div class="dhead"><span class="dnum">6</span><span class="dow">Thu</span><span class="tag t-work">Dad works</span></div>
+      <div class="dphoto">
+        <img src="img/orchard.jpg" alt="Fruit harvest" loading="lazy">
+        <img src="img/blackdiamond.jpg" alt="Black Diamond Mines Regional Preserve" loading="lazy">
+      </div>
+      <div class="dbody"><h3>Brentwood U-pick + Black Diamond Mines</h3>
+        <p>Close-to-home day. Pick fruit in the morning, then <b>Round Valley</b> or the <b>underground mine tour</b> at Black Diamond.</p>
+        <div class="chips"><span class="chip">⛏️ mine tour</span><span class="chip">🍑 August = peaches</span></div>
+      </div>
+    </article>
+
+    <article class="day vac">
+      <div class="dhead"><span class="dnum">7</span><span class="dow">Fri</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dphoto"><img src="img/pointreyes.jpg" alt="Cypress Tree Tunnel at Point Reyes" loading="lazy"></div>
+      <div class="dbody"><h3>Point Reyes</h3>
+        <p>Cypress Tree Tunnel, the tule elk, and a beach. Pick two or three stops and don't rush it.</p>
+        <div class="chips"><span class="chip warn">skip the lighthouse</span><span class="chip">~85 mi</span></div>
+      </div>
+    </article>
+
+    <article class="day work">
+      <div class="dhead"><span class="dnum">8</span><span class="dow">Sat</span><span class="tag t-work">Dad works</span></div>
+      <div class="dphoto"><img src="img/monterey.jpg" alt="Tide pool at Asilomar State Beach" loading="lazy"></div>
+      <div class="dbody"><h3>Monterey — tide pools</h3>
+        <p>Mom's must-do. Tide pools at Pacific Grove / Asilomar, aquarium optional. Mom, the kids and the grandparents; Dad's working.</p>
+        <div class="chips"><span class="chip warn">🌊 go at morning low tide</span><span class="chip">~140 mi</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ WEEK B ============ -->
+<section class="week">
+  <div class="whead">
+    <span class="wname">Week Two</span>
+    <span class="wrange">Sun Aug 9 – Sat Aug 15</span>
+    <span class="wcost">vacation charged: <b>2 days</b></span>
+  </div>
+  <div class="days">
+
+    <article class="day work">
+      <div class="dhead"><span class="dnum">9</span><span class="dow">Sun</span><span class="tag t-work">Dad works</span></div>
+      <div class="dphoto"><img src="img/diablo.jpg" alt="Mount Diablo summit" loading="lazy"></div>
+      <div class="dbody"><h3>Aliyah turns 15 🎂</h3>
+        <p>Church in the morning, then something local. <b>Mt. Diablo</b> in the evening if there's steam left — on a clear day you can see the Sierra from the top.</p>
+        <div class="chips"><span class="chip joy">🎂 Aliyah's birthday</span></div>
+      </div>
+    </article>
+
+    <article class="day work maybe">
+      <div class="dhead"><span class="dnum">10</span><span class="dow">Mon</span><span class="tag t-maybe">Pick one</span></div>
+      <div class="dphoto">
+        <img src="img/railroad.jpg" alt="California State Railroad Museum" loading="lazy">
+        <img src="img/coloma.jpg" alt="Marshall Gold Discovery State Historic Park" loading="lazy">
+      </div>
+      <div class="dbody">
+        <span class="pick">Not decided yet</span>
+        <h3>Railroad Museum <i>or</i> gold panning</h3>
+        <p><b>Sacramento</b> for the State Railroad Museum, <b>or</b> Coloma for real gold panning in the river where the rush started. Coloma is another 45 min past Sacramento, so it's one or the other.</p>
+        <div class="chips"><span class="chip warn">🌡️ panning cancels above 92°</span></div>
+      </div>
+    </article>
+
+    <article class="day vac">
+      <div class="dhead"><span class="dnum">11</span><span class="dow">Tue</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dphoto"><img src="img/calaveras.jpg" alt="Giant sequoia at Calaveras Big Trees State Park" loading="lazy"></div>
+      <div class="dbody"><h3>Calaveras Big Trees</h3>
+        <p>Giant sequoias — the fat ones, not the tall skinny redwoods from last week. Easy loop trail through the North Grove.</p>
+        <div class="chips"><span class="chip">🌲 ~115 mi</span></div>
+      </div>
+    </article>
+
+    <article class="day work">
+      <div class="dhead"><span class="dnum">12</span><span class="dow">Wed</span><span class="tag t-work">Dad works</span></div>
+      <div class="dbody"><h3>Home day · pack for Tahoe</h3>
+        <p>Pool, laundry, and get everything staged for two nights in the mountains.</p>
+        <div class="chips"><span class="chip">🧺 laundry</span><span class="chip">🎒 pack</span></div>
+      </div>
+    </article>
+
+    <article class="day tahoe vac">
+      <div class="ribbon">Tahoe · night 1</div>
+      <div class="dhead"><span class="dnum">13</span><span class="dow">Thu</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dphoto"><img src="img/tahoe.jpg" alt="Emerald Bay, Lake Tahoe" loading="lazy"></div>
+      <div class="dbody"><h3>Drive up to Tahoe</h3>
+        <p>About 3½ hours up. Check into <b>Pine Cone the Awesome</b> in Sunnyside — all ten of us plus Beth, A'maya and Tyler meeting us there.</p>
+        <div class="chips"><span class="chip k">🏔️ Sunnyside</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella's welcome</span></div>
+      </div>
+    </article>
+
+    <article class="day tahoe vac">
+      <div class="ribbon">Tahoe · night 2</div>
+      <div class="dhead"><span class="dnum">14</span><span class="dow">Fri</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dphoto"><img src="img/vikingsholm.jpg" alt="Vikingsholm at Emerald Bay" loading="lazy"></div>
+      <div class="dbody"><h3>The big Tahoe day</h3>
+        <p><b>Pope</b> or <b>Kiva Beach</b> for swimming, <b>Emerald Bay</b> for the view, and the walk down to <b>Vikingsholm</b> if everyone's up for the climb back.</p>
+        <div class="chips"><span class="chip k">🏊 lake day</span><span class="chip k">⛰️ Emerald Bay</span></div>
+      </div>
+    </article>
+
+    <article class="day tahoe vac">
+      <div class="ribbon">Tahoe · out</div>
+      <div class="dhead"><span class="dnum">15</span><span class="dow">Sat</span><span class="tag t-vac">Dad off</span></div>
+      <div class="dbody"><h3>Tahoe morning, then home</h3>
+        <p>One last morning at the lake, then the drive back down to Knightsen.</p>
+        <div class="chips"><span class="chip k">🚗 ~3½ hr</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ WEEK C ============ -->
+<section class="week">
+  <div class="whead">
+    <span class="wname">Week Three</span>
+    <span class="wrange">Sun Aug 16 – Tue Aug 18</span>
+    <span class="wcost">vacation charged: <b>0 days</b></span>
+  </div>
+  <div class="days">
+
+    <article class="day work">
+      <div class="dhead"><span class="dnum">16</span><span class="dow">Sun</span><span class="tag t-work">Dad works</span></div>
+      <div class="dbody"><h3>Church &amp; a slow day</h3>
+        <p>Church in the morning, pool and local stuff after. Recovering from Tahoe.</p>
+      </div>
+    </article>
+
+    <article class="day work maybe">
+      <div class="dhead"><span class="dnum">17</span><span class="dow">Mon</span><span class="tag t-maybe">Maybe</span></div>
+      <div class="dphoto"><img src="img/santacruz.jpg" alt="Santa Cruz Beach Boardwalk" loading="lazy"></div>
+      <div class="dbody">
+        <span class="pick">Leaning skip</span>
+        <h3>Santa Cruz Boardwalk <i>or</i> buffer day</h3>
+        <p>On the calendar as a maybe. Leaning toward skipping it so we're not doing a mountain of laundry the night before we fly.</p>
+        <div class="chips"><span class="chip">🧺 pack &amp; laundry</span></div>
+      </div>
+    </article>
+
+    <article class="day trav">
+      <div class="dhead"><span class="dnum">18</span><span class="dow">Tue</span><span class="tag t-trav">Travel</span></div>
+      <div class="dphoto"><img src="img/sfo.jpg" alt="San Francisco International Airport" loading="lazy"></div>
+      <div class="dbody"><h3>Fly home</h3>
+        <p>Van back to SFO by noon, then home to Texas.</p>
+        <div class="chips"><span class="chip">✈️ dropoff by noon</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PANELS ============ -->
+<div class="panels">
+
+  <div class="panel">
+    <h2>Dad's vacation math</h2>
+    <p class="ph">A worked Saturday covers an earlier day in its own week; a worked Sunday covers a later one.</p>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>Week</th><th>Days off</th><th>Covered by</th><th class="n">Charged</th></tr></thead>
+        <tbody>
+          <tr><td>Aug 2–8</td><td>4th, 5th, 7th</td><td>Sat the 8th</td><td class="n">2</td></tr>
+          <tr><td>Aug 9–15</td><td>13th, 14th, 15th</td><td>Sun the 9th</td><td class="n">2</td></tr>
+          <tr><td>Aug 16–22</td><td>18th</td><td>Sun the 16th</td><td class="n">0</td></tr>
+          <tr class="tot"><td colspan="3">Total charged</td><td class="n">4 days · 32 hrs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes" style="margin-top:14px">
+      <li><span class="ic">📉</span><span>Moving Tahoe to the 13th–15th cost one extra day: <b>Saturday the 15th used to be a work day</b>, and now it's the drive home.</span></li>
+      <li><span class="ic">🌲</span><span>If Calaveras on the 11th becomes a vacation day too, the total goes to <b>5 days / 40 hrs</b>.</span></li>
+      <li><span class="ic">🏦</span><span>Either way it fits — there are <b>69.5 hours</b> in the bank.</span></li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>Don't forget</h2>
+    <p class="ph">The things that will bite us if nobody handles them.</p>
+    <ul class="notes">
+      <li><span class="ic">🎟️</span><span><b>Muir Woods needs a parking or shuttle reservation</b> booked in advance at gomuirwoods.com — summer slots sell out, and there's no walk-up option.</span></li>
+      <li><span class="ic">💺</span><span><b>Ellie needs a booster seat.</b> California requires one under age 8 or under 4'9". Still to decide: rent one with the van or fly hers out.</span></li>
+      <li><span class="ic">🌡️</span><span><b>Gold panning has a heat cutoff</b> — lessons stop above 92°, tours above 95°. If we go, take a 10 or 11 am slot. $10 a person, $10 to park, or free with our own pan.</span></li>
+      <li><span class="ic">🌊</span><span><b>Tide pools only work at low tide.</b> Check the Monterey tide chart before locking the 8th.</span></li>
+      <li><span class="ic">🥾</span><span><b>Point Reyes lighthouse is a trap with little kids</b> — about 45 minutes each way plus 300-odd stairs.</span></li>
+      <li><span class="ic">🛣️</span><span><b>The van covers 2,100 miles.</b> Everything above adds up to roughly 1,575, so there's cushion — but Yosemite would eat it, which is part of why it's off the list.</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Plan as of 28 July 2026 · Tahoe cabin booked · van booked · lodging in Knightsen is Grandma &amp; Grandpa's.
+  Dashed cards are still undecided.
+  <div class="cred">Photos from Wikimedia Commons:
+    Muir Woods &amp; Point Reyes © Matthew Dillon / John D. (CC BY 2.0) ·
+    Asilomar tide pool © Ed Bierman (CC BY 2.0) ·
+    Emerald Bay © Eric Philbin (CC0) ·
+    Vikingsholm © Kevin Payravi (CC BY-SA 4.0) ·
+    Calaveras © GregMcCollum (CC0) ·
+    Mt. Diablo © Pi.1415926535 (CC BY-SA 3.0) ·
+    Railroad Museum © BenFranske (CC BY-SA 3.0) ·
+    Coloma © Missvain (CC BY 4.0) ·
+    Black Diamond Mines © Bcrawf123 (CC BY-SA 4.0) ·
+    Santa Cruz © Nick Amoscato (CC BY 2.0) ·
+    SFO © Gregory Varnum (CC BY-SA 4.0) ·
+    cherry harvest, Internet Archive Book Images (no restrictions).
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
