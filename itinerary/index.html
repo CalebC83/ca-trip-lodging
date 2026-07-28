@@ -111,7 +111,6 @@
   .lede{font-size:.86rem;color:var(--mute);margin:0 0 8px}
   .day{cursor:pointer}
   .day:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .more{margin-top:auto;padding-top:6px;font-size:.72rem;font-weight:650;color:var(--accent);opacity:.85}
   dialog#dd{border:none;border-radius:16px;padding:0;max-width:560px;width:calc(100% - 32px);
     background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.32)}
   dialog#dd::backdrop{background:rgba(12,14,18,.55);backdrop-filter:blur(2px)}
@@ -483,8 +482,7 @@
   document.querySelectorAll('article.day').forEach(function(card){
     var tpl=card.querySelector('template.detail'); if(!tpl) return;
     var num=card.querySelector('.dnum'), dow=card.querySelector('.dow'),
-        h3=card.querySelector('h3'), body=card.querySelector('.dbody');
-    if(body){var more=document.createElement('div');more.className='more';more.textContent='Full day →';body.appendChild(more)}
+        h3=card.querySelector('h3');
     card.setAttribute('tabindex','0');
     card.setAttribute('role','button');
     function open(){
