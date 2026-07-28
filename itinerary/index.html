@@ -90,8 +90,13 @@
   .t-trav{background:var(--trav-bg);color:var(--trav)}
   .t-maybe{background:var(--maybe-bg);color:var(--maybe)}
 
-  .dphoto{display:flex;gap:2px;background:var(--line)}
-  .dphoto img{width:100%;height:104px;object-fit:cover;display:block;flex:1;min-width:0}
+  /* Fixed-height strips re-crop themselves at every breakpoint (the box ratio
+     tracks card width), which decapitates anyone near the top edge. Pin the
+     RATIO on the container so the crop is identical at every width, and let
+     one- and two-photo strips stay the same shape. */
+  .dphoto{display:flex;gap:2px;background:var(--line);aspect-ratio:3/2;overflow:hidden}
+  .dphoto img{width:100%;height:100%;object-fit:cover;display:block;flex:1;min-width:0}
+  .dphoto img.top{object-position:50% 0}
   .dbody{padding:10px 11px 12px;flex:1;display:flex;flex-direction:column}
   .dbody h3{margin:0 0 5px;font-size:.98rem;line-height:1.25;letter-spacing:-.01em}
   .dbody p{margin:0 0 8px;font-size:.85rem;color:var(--mute);line-height:1.45}
@@ -144,7 +149,7 @@
       width:70px;flex:none;justify-content:flex-start}
     .day .tag{margin-left:0;margin-top:5px;font-size:.58rem;padding:2px 6px;
       white-space:normal;line-height:1.25;letter-spacing:.03em}
-    .dphoto{flex:none;width:84px;flex-direction:column;min-height:88px}
+    .dphoto{flex:none;width:84px;flex-direction:column;min-height:88px;aspect-ratio:auto}
     .dphoto img{height:auto;flex:1 1 0;min-height:0}
     .dbody{padding:11px}
     .ribbon{display:none}
@@ -298,7 +303,7 @@
       <div class="dphoto"><img src="img/tahoe.jpg" alt="Emerald Bay, Lake Tahoe" loading="lazy"></div>
       <div class="dbody"><h3>Drive up to Tahoe</h3>
         <p>About 3½ hours up. Check into <b>Pine Cone the Awesome</b> in Sunnyside — all ten of us plus Beth, A'maya and Tyler meeting us there.</p>
-        <div class="chips"><span class="chip k">🏔️ Sunnyside</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella's welcome</span></div>
+        <div class="chips"><span class="chip k">🏔️ Sunnyside</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
       </div>
     </article>
 
@@ -308,7 +313,7 @@
       <div class="dphoto"><img src="img/vikingsholm.jpg" alt="Vikingsholm at Emerald Bay" loading="lazy"></div>
       <div class="dbody"><h3>The big Tahoe day</h3>
         <p><b>Pope</b> or <b>Kiva Beach</b> for swimming, <b>Emerald Bay</b> for the view, and the walk down to <b>Vikingsholm</b> if everyone's up for the climb back.</p>
-        <div class="chips"><span class="chip k">🏊 lake day</span><span class="chip k">⛰️ Emerald Bay</span></div>
+        <div class="chips"><span class="chip k">🏊 lake day</span><span class="chip k">⛰️ Emerald Bay</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
       </div>
     </article>
 
@@ -317,7 +322,7 @@
       <div class="dhead"><span class="dnum">15</span><span class="dow">Sat</span><span class="tag t-vac">Dad off</span></div>
       <div class="dbody"><h3>Tahoe morning, then home</h3>
         <p>One last morning at the lake, then the drive back down to Knightsen.</p>
-        <div class="chips"><span class="chip k">🚗 ~3½ hr</span></div>
+        <div class="chips"><span class="chip k">🚗 ~3½ hr</span><span class="chip k"><img class="bella" src="img/bella.png" alt=""> Bella Boo Approved</span></div>
       </div>
     </article>
 
@@ -335,7 +340,7 @@
 
     <article class="day work">
       <div class="dhead"><span class="dnum">16</span><span class="dow">Sun</span><span class="tag t-work">Dad works</span></div>
-      <div class="dphoto"><img src="img/grandpa.jpg" alt="On the tractor at Grandma and Grandpa's place in Knightsen" loading="lazy"></div>
+      <div class="dphoto"><img class="top" src="img/grandpa.jpg" alt="On the tractor at Grandma and Grandpa's place in Knightsen" loading="lazy"></div>
       <div class="dbody"><h3>Church &amp; a slow day</h3>
         <p>Church in the morning, pool and local stuff after. Recovering from Tahoe.</p>
       </div>
